@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="road">
+      <div className="line">
+        <p>linear</p>
+        <img className="car" src="/car.png" alt="car" />
+      </div>
+      <div className="line">
+        <p>ease</p>
+        <img className="car" src="/car.png" alt="car" />
+      </div>
+      <div className="line">
+        <p>ease-in</p>
+        <img className="car" src="/car.png" alt="car" />
+      </div>
+      <div className="line">
+      <p>ease-out</p>
+        <img className="car" src="/car.png" alt="car" />
+      </div>
+      <div className="line">
+      <p>ease-in-out</p>
+        <img className="car" src="/car.png" alt="car" />
+      </div>
     </div>
+
+    <div className="circle">
+      <div className="circle1">
+        <div className="circle2"></div>
+      </div>
+    </div>
+    
+    </>
   );
 }
 

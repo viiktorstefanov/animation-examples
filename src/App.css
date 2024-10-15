@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.road {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.line {
+    background-color: black;
+    width: 1000px;
+    border: 2px solid #fff;
+    border-bottom: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.line:nth-of-type(5) {
+    border-bottom: 2px solid #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.car {
+    width: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.line p {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.line:nth-of-type(1) .car {
+    animation: drive 5s linear infinite;
+}
+
+.line:nth-of-type(2) .car {
+    animation: drive 5s ease infinite;
+}
+
+.line:nth-of-type(3) .car {
+    animation: drive 5s ease-in infinite;
+}
+
+.line:nth-of-type(4) .car {
+    animation: drive 5s ease-out infinite;
+}
+
+.line:nth-of-type(5) .car {
+    animation: drive 5s ease-in-out infinite;
+}
+
+.circle1 {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid palegreen;
+    border-top: 3px solid brown;
+    animation: spin 3s linear infinite;
+}
+
+.circle2 {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid saddlebrown;
+    border-top: 3px solid darkgoldenrod;
+    animation: spin 2s linear infinite ;
+}
+
+@keyframes drive {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(750px);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
